@@ -1,0 +1,3 @@
+[submodule "style"]
+	path = style
+	url = https://gitlab.hello4am.com/yinshi/style.git
