@@ -7,14 +7,7 @@ fly.config.baseURL = config.URL
 tokenFly.config = fly.config
 let ysToken = wx.getStorageSync('token')
 let unlock = false
-// 支持Promise.finally
-Promise.prototype.finally = function (callback) {
-  let P = this.constructor
-  return this.then(
-    value => P.resolve(callback()).then(() => value),
-    reason => P.resolve(callback()).then(() => { throw reason })
-  )
-}
+
 // 登录获取token
 function getToken() {
   return new Promise((resolve, reject) => {
@@ -67,10 +60,9 @@ fly.interceptors.response.use(function (response) {
   } else if (response.data.code === 401) { // token过期
     if (unlock) return fly.request(response.request)
     this.lock() // 锁定当前实例，后续请求会在拦截器外排队
-    return getToken().finally(() => {
+    return getToken().then(() => {
       unlock = true
       this.unlock() // 解锁后，会继续发起请求队列中的任务
-    }).then(() => {
       return fly.request(response.request)
     })
   } else { // 其他错误
