@@ -10,8 +10,6 @@
 ├─behaviors ---------- // 公用逻辑模块
 ├─components --------- // 自定义组件
 │ └─parser ----------- // 富文本插件
-│   ├─libs 
-│   └─trees 
 ├─constants ---------- // 常量
 ├─images ------------- // 静态资源
 ├─miniprogram_npm ---- // npm包
@@ -41,5 +39,4 @@
 - [分享图插件 Painter](https://github.com/Kujiale-Mobile/Painter)
 - [富文本插件 Parser](https://github.com/jin-yufeng/Parser)
 - [Fly.js](https://github.com/wendux/fly)
-- [qs](https://github.com/ljharb/qs)
 - [Day.js](https://day.js.org/zh-CN/)
