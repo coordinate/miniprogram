@@ -1,7 +1,7 @@
 # miniprogram
 
-## 注意
-- 克隆代码之后需要在项目根目录运行`git submodule add https://gitlab.hello4am.com/yinshi/style.git style`来安装样式库
+## 安装使用
+- 克隆代码运行 `git clone https://gitlab.hello4am.com/yinshi/miniprogram.git --recurse-submodules`
 
 ## 目录结构
 ```
@@ -9,11 +9,12 @@
 │ └─lib -------------- // api库
 ├─behaviors ---------- // 公用逻辑模块
 ├─components --------- // 自定义组件
-│ └─parser ----------- // 富文本插件
+│ └─painter ---------- // 分享图插件
 ├─constants ---------- // 常量
 ├─images ------------- // 静态资源
 ├─miniprogram_npm ---- // npm包
-│ └─dayjs ------------ // 时间处理工具
+│ ├─dayjs ------------ // 时间处理工具
+| └─parser-wx -------- // 富文本插件
 ├─pages -------------- // 页面
 │ └─index ------------ // 首页
 ├─style -------------- // 样式库（子模块）

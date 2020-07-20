@@ -9,8 +9,9 @@
     "navigationBarTextStyle": "black"
   },
   "usingComponents": {
-    "mp-loading": "weui-miniprogram/loading/loading",
-    "parser": "/components/parser/parser"
+    "parser": "parser-wx",
+    "painter":"/components/painter/painter",
+    "mp-loading": "weui-miniprogram/loading/loading"
   },
   "useExtendedLib": {
     "weui": true

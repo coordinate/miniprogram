@@ -14,6 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dayjs": "latest"
+    "dayjs": "latest",
+    "parser-wx": "latest"
   }
 }
