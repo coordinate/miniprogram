@@ -1,4 +1,6 @@
 <!--index.wxml-->
+<import src="/template/loading/index" />
 <view class="container">
-  
+  <view wx:for="{{list}}" wx:key="index" style="height: 300rpx">{{item.name}}</view>
+  <template is="loading" data="{{loading, more}}" />
 </view>

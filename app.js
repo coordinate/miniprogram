@@ -4,6 +4,7 @@ import config from './config'
 import api from './api/api'
 import log from './utils/log'
 import util from './utils/util'
+import behaviors from './behaviors/index'
 import constants from './constants/index'
 
 App({
@@ -14,6 +15,7 @@ App({
     wx.$api = api
     wx.$log = log
     wx.$util = util
+    wx.$behaviors = behaviors
     wx.$constants = constants
     // 监听小程序更新
     const updateManager = wx.getUpdateManager()
