@@ -1,5 +1,9 @@
 /* loading */
 
+mp-loading {
+  width: 100%;
+}
+
 .loading-nomore {
   flex-shrink: 0;
   width: 100%;

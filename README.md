@@ -8,6 +8,7 @@
 ├─api ---------------- // 接口封装
 │ └─lib -------------- // api库
 ├─behaviors ---------- // 公用逻辑模块
+│ └─pagination ------- // 分页
 ├─components --------- // 自定义组件
 │ └─painter ---------- // 分享图插件
 ├─constants ---------- // 常量
@@ -28,7 +29,6 @@
 ## 功能点&BUG
 - 基础库 2.10.2 版本起，异步 API 支持 callback & promise 两种调用方式
 - 使用 this.route 来获取当前页面路径，填在分享路径理面
-- 上拉加载需要加锁lock优化
 
 ## 参考文档
 - [使用 Component 构造器构造页面](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/component.html)

@@ -30,6 +30,13 @@ function getToken() {
 fly.interceptors.request.use((request) => {
   request.headers['Content-Type'] = 'application/json;charset=UTF-8'
   if (ysToken) {
+    const timestamp = wx.getStorageSync('timestamp')
+    if (timestamp && (new Date().getTime() - timestamp < 60 * 1000)) {
+      // 一分钟内无需重复调用 wx.checkSession
+      request.headers['Authorization'] = `Bearer ${ysToken}`
+      return request
+    }
+    wx.setStorageSync('timestamp', +new Date())
     return wx.checkSession().then(() => {
       // session_key 未过期，并且在本生命周期一直有效
       request.headers['Authorization'] = `Bearer ${ysToken}`

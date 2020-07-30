@@ -1,22 +1,22 @@
 //app.js
-import dayjs from 'dayjs'
+import behaviors from './behaviors/index'
+import constants from './constants/index'
 import config from './config'
 import api from './api/api'
 import log from './utils/log'
 import util from './utils/util'
-import behaviors from './behaviors/index'
-import constants from './constants/index'
+import dayjs from 'dayjs'
 
 App({
   onLaunch() {
     // 注册全局方法
-    wx.$dayjs = dayjs
+    wx.$behaviors = behaviors
+    wx.$constants = constants
     wx.$config = config
     wx.$api = api
     wx.$log = log
     wx.$util = util
-    wx.$behaviors = behaviors
-    wx.$constants = constants
+    wx.$dayjs = dayjs
     // 监听小程序更新
     const updateManager = wx.getUpdateManager()
     updateManager.onUpdateReady(() => {

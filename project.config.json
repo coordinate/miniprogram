@@ -28,10 +28,11 @@
 		},
 		"bundle": true,
 		"useIsolateContext": true,
-		"useCompilerModule": false,
+		"useCompilerModule": true,
 		"userConfirmedUseCompilerModuleSwitch": true,
 		"packNpmManually": false,
-		"packNpmRelationList": []
+		"packNpmRelationList": [],
+		"useMultiFrameRuntime": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.12.0",
