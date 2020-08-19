@@ -1,3 +1,9 @@
-module.exports = {
+// 获取对象数组下标对应名字
+function getObjectArrayName(objectArray, value) {
+  var index = objectArray.map(function (v) { return v.value }).indexOf(value)
+  return index !== -1 ? objectArray[index].name : ''
+}
 
+module.exports = {
+  getObjectArrayName: getObjectArrayName
 }
