@@ -1,6 +1,6 @@
 module.exports = Behavior({
   data: {
-    loading: false,
+    load: false,
     more: true,
     list: [],
     page: 1
@@ -10,13 +10,13 @@ module.exports = Behavior({
      * 页面上拉触底事件的处理函数
      */
     async onReachBottom() {
-      if (this.data.loading || !this.data.more) return
+      if (this.data.load || !this.data.more) return
       this.setData({
-        loading: true
+        load: true
       })
       const data = await this.getList(this.data.page)
       this.setData({
-        loading: false
+        load: false
       })
       if (data.length) {
         this.data.page++

@@ -1,0 +1,4 @@
+<template name="loadmore">
+  <mp-loading wx:if="{{load}}" type="circle"></mp-loading>
+  <view hidden="{{more}}" class="w-100 fs-0 f-cc fs-26 nomore">没有更多了~</view>
+</template>

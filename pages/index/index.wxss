@@ -1,1 +1,2 @@
 /**index.wxss**/
+@import "./index.skeleton.wxss";

@@ -1,0 +1,36 @@
+<!--
+此文件为开发者工具生成，生成时间: 2020/8/19 下午3:38:32 
+使用方法：
+在 D:\library\miniprogram\pages\index\index.wxml 引入模板
+
+```
+<import src="index.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 D:\library\miniprogram\pages\index\index.wxss 中引入样式
+```
+@import "./index.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="container">
+      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-18-7500-308 sk-text" style="background-position-x: 50%;">
+        Barbara
+      </view>
+      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-18-7500-932 sk-text" style="background-position-x: 50%;">
+        Kenneth
+      </view>
+      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-18-7500-709 sk-text" style="background-position-x: 50%;">
+        Jose
+      </view>
+    </view>
+    <view class="sk-loading-spinner">
+      <view class="circular">
+      </view>
+    </view>
+  </view>
+</template>

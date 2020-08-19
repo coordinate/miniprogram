@@ -1,4 +1,0 @@
-<template name="loading">
-	<mp-loading wx:if="{{loading}}" type="circle"></mp-loading>
-  <view hidden="{{more}}" class="loading-nomore">没有更多了~</view>
-</template>

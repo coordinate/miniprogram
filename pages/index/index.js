@@ -1,7 +1,9 @@
 //index.js
 Component({
   behaviors: [wx.$behaviors.pagination],
-  data: {},
+  data: {
+    loading: true
+  },
   methods: {
     getList(page = 1, limit = 10) {
       return new Promise((resolve, reject) => {
@@ -24,6 +26,7 @@ Component({
     async onLoad(options) {
       const list = await this.getList()
       this.setData({
+        loading: false,
         list
       })
     }

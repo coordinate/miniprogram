@@ -1,16 +1,10 @@
-/* loading */
+/* loadmore */
 
 mp-loading {
   width: 100%;
 }
 
-.loading-nomore {
-  flex-shrink: 0;
-  width: 100%;
+.nomore {
   height: 130rpx;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 26rpx;
   color: #A8ACBB;
 }
