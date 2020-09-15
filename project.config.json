@@ -16,7 +16,7 @@
     "autoAudits": false,
     "showShadowRootInWxmlPanel": true,
     "scopeDataCheck": false,
-    "uglifyFileName": true,
+    "uglifyFileName": false,
     "checkInvalidKey": true,
     "checkSiteMap": false,
     "uploadWithSourceMap": true,
@@ -37,7 +37,7 @@
     "skeletonGenerateFilesWithoutConfirm": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.12.0",
+  "libVersion": "2.12.2",
   "appid": "wx90a9e8c50f189d58",
   "projectname": "miniprogram",
   "debugOptions": {

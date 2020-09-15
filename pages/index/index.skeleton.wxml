@@ -1,5 +1,5 @@
 <!--
-此文件为开发者工具生成，生成时间: 2020/8/19 下午3:38:32 
+此文件为开发者工具生成，生成时间: 2020/9/4 下午6:29:13 
 使用方法：
 在 D:\library\miniprogram\pages\index\index.wxml 引入模板
 
@@ -18,14 +18,32 @@
 <template name="skeleton">
   <view class="sk-container">
     <view class="container">
-      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-18-7500-308 sk-text" style="background-position-x: 50%;">
-        Barbara
+      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-14-2857-105 sk-text" style="background-position-x: 50%;">
+        Steven
       </view>
-      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-18-7500-932 sk-text" style="background-position-x: 50%;">
-        Kenneth
+      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-14-2857-594 sk-text" style="background-position-x: 50%;">
+        George
       </view>
-      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-18-7500-709 sk-text" style="background-position-x: 50%;">
-        Jose
+      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-14-2857-255 sk-text" style="background-position-x: 50%;">
+        Jessica
+      </view>
+      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-14-2857-405 sk-text" style="background-position-x: 50%;">
+        Richard
+      </view>
+      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-14-2857-571 sk-text" style="background-position-x: 50%;">
+        Jennifer
+      </view>
+      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-14-2857-818 sk-text" style="background-position-x: 50%;">
+        Kimberly
+      </view>
+      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-14-2857-830 sk-text" style="background-position-x: 50%;">
+        Michelle
+      </view>
+      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-14-2857-190 sk-text" style="background-position-x: 50%;">
+        Edward
+      </view>
+      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-14-2857-784 sk-text" style="background-position-x: 50%;">
+        Gary
       </view>
     </view>
     <view class="sk-loading-spinner">

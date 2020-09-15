@@ -5,7 +5,7 @@ import config from './config'
 import api from './api/api'
 import log from './utils/log'
 import util from './utils/util'
-import dayjs from 'dayjs'
+import dayjs from './utils/dayjs'
 
 App({
   onLaunch() {
