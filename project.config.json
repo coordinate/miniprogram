@@ -37,7 +37,7 @@
     "skeletonGenerateFilesWithoutConfirm": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.12.2",
+  "libVersion": "2.13.0",
   "appid": "wx90a9e8c50f189d58",
   "projectname": "miniprogram",
   "debugOptions": {

@@ -1,8 +1,9 @@
-import fly from './fly'
+import fly, { ysToken } from './fly'
 import socket from './socket'
 import upload from './upload'
 import download from './download'
 export default {
+  ysToken, // token
   ...socket, // socket
   ...upload, // 上传文件
   ...download, // 下载文件

@@ -21,8 +21,8 @@ const navigateBack = () => {
 const openSetting = (scope = 'scope.writePhotosAlbum') => {
   return new Promise((resolve, reject) => {
     const content = `您拒绝了“${constants.scopeMappings[scope]}”授权\n请点击确定按钮重新打开授权`
-    showModal('提示', content).then(res => {
-      // console.log(res)
+    showModal('提示', content).then(result => {
+      // console.log(result)
       wx.openSetting({
         success: (res) => {
           console.log('openSetting success', res)
@@ -37,8 +37,8 @@ const openSetting = (scope = 'scope.writePhotosAlbum') => {
           reject(err)
         }
       })
-    }).catch(err => {
-      console.log(err)
+    }).catch(error => {
+      reject(error)
     })
   })
 }

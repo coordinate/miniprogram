@@ -5,7 +5,7 @@ const fly = new Fly()
 const tokenFly = new Fly()
 fly.config.baseURL = config.URL
 tokenFly.config = fly.config
-let ysToken = wx.getStorageSync('token')
+export let ysToken = wx.getStorageSync('token')
 let unlock = false
 
 // 登录获取token
