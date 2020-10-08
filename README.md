@@ -31,7 +31,7 @@
 - 基础库 2.10.2 版本起，异步 API 支持 callback & promise 两种调用方式
 - 使用 this.route 来获取当前页面路径，填在分享路径理面
 - constants 用于存放项目特定常量
-- dayjs配置中文只需把app.js里的引用改为utils文件夹下的day.js文件即可
+- dayjs配置中文只能在app.js里面进行配置
 
 ## 参考文档
 - [使用 Component 构造器构造页面](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/component.html)

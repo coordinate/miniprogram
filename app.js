@@ -5,7 +5,9 @@ import config from './config'
 import api from './api/api'
 import log from './utils/log'
 import util from './utils/util'
-import dayjs from './utils/dayjs'
+import dayjs from 'dayjs'
+import './utils/lib/zh-cn'
+dayjs.locale('zh-cn')
 
 App({
   onLaunch() {
