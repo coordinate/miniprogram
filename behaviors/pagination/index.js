@@ -3,7 +3,7 @@ module.exports = Behavior({
     load: false,
     more: true,
     list: [],
-    page: 1
+    page: 2
   },
   methods: {
     /**
