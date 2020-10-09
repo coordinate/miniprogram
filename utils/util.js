@@ -2,9 +2,11 @@ import constants from '../constants/index'
 
 /**
  * 二次封装navigateBack
+ * @param delta 返回的页面数，如果 delta 大于现有页面数，则返回到首页
  */
-const navigateBack = () => {
+const navigateBack = (delta = 1) => {
   wx.navigateBack({
+    delta,
     fail: (err) => {
       console.log('navigateBack fail', err)
       wx.reLaunch({
@@ -17,13 +19,15 @@ const navigateBack = () => {
 /**
  * 二次封装openSetting
  * @param scope 用户授权设置信息属性（默认为scope.writePhotosAlbum）
+ * @param withSubscriptions 是否同时获取用户订阅消息的订阅状态，默认不获取
  */
-const openSetting = (scope = 'scope.writePhotosAlbum') => {
+const openSetting = (scope = 'scope.writePhotosAlbum', withSubscriptions = false) => {
   return new Promise((resolve, reject) => {
     const content = `您拒绝了“${constants.scopeMappings[scope]}”授权\n请点击确定按钮重新打开授权`
     showModal('提示', content).then(result => {
       // console.log(result)
       wx.openSetting({
+        withSubscriptions,
         success: (res) => {
           console.log('openSetting success', res)
           if (res.authSetting[scope]) {
@@ -47,14 +51,14 @@ const openSetting = (scope = 'scope.writePhotosAlbum') => {
  * 二次封装showModal
  * @param title 提示的标题
  * @param content 提示的内容
- * @param showCancel 是否显示取消按钮
+ * @param options 其它配置选项
  */
-const showModal = (title = '', content = '', showCancel = true) => {
+const showModal = (title = '', content = '', options = {}) => {
   return new Promise((resolve, reject) => {
     wx.showModal({
       title,
       content,
-      showCancel,
+      ...options,
       success: (res) => {
         // console.log('showModal success', res)
         if (res.confirm) {
@@ -75,9 +79,11 @@ const showModal = (title = '', content = '', showCancel = true) => {
  * 二次封装showToast
  * @param title 提示的内容
  * @param icon 图标
+ * @param options 其它配置选项
  */
-const showToast = (title = '系统异常，请稍后再试~', icon = 'none') => {
+const showToast = (title = '系统异常，请稍后再试~', icon = 'none', options = {}) => {
   wx.showToast({
+    ...options,
     title,
     icon
   })
