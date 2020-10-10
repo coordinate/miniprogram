@@ -32,7 +32,7 @@ export default {
    * @param filePaths 要上传文件资源的路径 (数组)
    * @return urls Array
    */
-  uploadfiles(filePaths) {
+  uploadFiles(filePaths) {
     let urls = []
     return new Promise(async (resolve, reject) => {
       for (let i = 0; i < filePaths.length; i++) {
