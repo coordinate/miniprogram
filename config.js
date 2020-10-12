@@ -20,11 +20,12 @@ const WSS_ADMIN = {
 }
 const HOST = 'https://cdn.hello4am.com'
 const config = {
-  URL_PREFIX: `${HOST}/web/`, // 资源前缀
-  URL_UPLOAD: `${HOST}/api`, // 上传地址
+  URL_UPLOAD: `${URL_ADMIN[env]}/api`, // 文件上传地址
+  URL_PREFIX: `${HOST}/web/`, // 静态资源前缀
   URL: `${URL_ADMIN[env]}`, // 接口地址
   WSS: `${WSS_ADMIN[env]}`, // socket
-  VERSION: envVersion, // 小程序版本 
+  VERSION: envVersion, // 小程序版本
+  HOST
 }
 
 export default config

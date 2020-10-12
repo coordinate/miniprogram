@@ -9,8 +9,9 @@ export default {
     return new Promise((resolve, reject) => {
       wx.uploadFile({
         url: config.URL_UPLOAD,
-        name: 'file',
         filePath,
+        name: 'file', // 根据后端接口而定
+        formData: {}, // 根据后端接口而定
         success: (res) => {
           console.log('uploadFile success===>', res.data)
           const data = JSON.parse(res.data)
