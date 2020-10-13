@@ -9,22 +9,25 @@
 ├─api ---------------- // 接口封装
 │ └─lib -------------- // api库
 ├─behaviors ---------- // 公用逻辑模块
-│ └─pagination ------- // 分页
+│ └─pagination ------- // 分页逻辑
 ├─components --------- // 自定义组件
 │ └─painter ---------- // 分享图插件
 ├─constants ---------- // 常量
 ├─images ------------- // 静态资源
 ├─miniprogram_npm ---- // npm包
+│ ├─@we-debug -------- // 调试工具
 │ ├─dayjs ------------ // 时间处理工具
-| └─parser-wx -------- // 富文本插件
+│ ├─deepmerge -------- // 调试工具插件
+│ └─parser-wx -------- // 富文本插件
 ├─pages -------------- // 页面
 │ └─index ------------ // 首页
-├─style -------------- // 样式库（子模块）
+├─style -------------- // 样式库
 ├─template ----------- // 自定义模版
-│ └─loading ---------- // 加载更多
+│ └─loadmore --------- // 加载更多
 ├─utils -------------- // 工具封装
 │ └─lib -------------- // 工具库
 └─wxs ---------------- // wxs
+  └─filter ----------- // 过滤器
 ```
 
 ## 功能点&BUG
@@ -46,3 +49,4 @@
 - [图表插件 echarts](https://github.com/ecomfe/echarts-for-weixin)
 - [Fly.js](https://github.com/wendux/fly)
 - [Day.js](https://day.js.org/zh-CN/)
+- [调试工具 we-debug](https://github.com/dlhandsome/we-debug)

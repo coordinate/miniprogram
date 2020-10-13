@@ -9,6 +9,11 @@ import dayjs from 'dayjs'
 import './utils/lib/zh-cn'
 dayjs.locale('zh-cn')
 
+import weDebug from '@we-debug/core/libs/index'
+import vconsole from '@we-debug/plugin-vconsole'
+weDebug.use(vconsole)
+weDebug.init()
+
 App({
   onLaunch() {
     // 注册全局方法

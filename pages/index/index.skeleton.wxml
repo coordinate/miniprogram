@@ -1,5 +1,5 @@
 <!--
-此文件为开发者工具生成，生成时间: 2020/9/4 下午6:29:13 
+此文件为开发者工具生成，生成时间: 2020/10/13 下午9:51:29 
 使用方法：
 在 D:\library\miniprogram\pages\index\index.wxml 引入模板
 
@@ -18,37 +18,33 @@
 <template name="skeleton">
   <view class="sk-container">
     <view class="container">
-      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-14-2857-105 sk-text" style="background-position-x: 50%;">
-        Steven
-      </view>
-      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-14-2857-594 sk-text" style="background-position-x: 50%;">
-        George
-      </view>
-      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-14-2857-255 sk-text" style="background-position-x: 50%;">
-        Jessica
-      </view>
-      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-14-2857-405 sk-text" style="background-position-x: 50%;">
-        Richard
-      </view>
-      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-14-2857-571 sk-text" style="background-position-x: 50%;">
-        Jennifer
-      </view>
-      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-14-2857-818 sk-text" style="background-position-x: 50%;">
-        Kimberly
-      </view>
-      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-14-2857-830 sk-text" style="background-position-x: 50%;">
-        Michelle
-      </view>
-      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-14-2857-190 sk-text" style="background-position-x: 50%;">
-        Edward
-      </view>
-      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-14-2857-784 sk-text" style="background-position-x: 50%;">
-        Gary
+      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-18-7500-341 sk-text" style="background-position-x: 50%;">Sharon</view>
+      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-18-7500-213 sk-text" style="background-position-x: 50%;">Sarah</view>
+      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-18-7500-644 sk-text" style="background-position-x: 50%;">Amy</view>
+      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-18-7500-897 sk-text" style="background-position-x: 50%;">Margaret</view>
+      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-18-7500-734 sk-text" style="background-position-x: 50%;">Thomas</view>
+    </view>
+    <view is="miniprogram_npm/@we-debug/core/component/index/index">
+      <view is="miniprogram_npm/@we-debug/core/component/ui-check/index"></view>
+      <view is="miniprogram_npm/@we-debug/core/component/mask/index"></view>
+      <view class="component-index-index--w-badges-group">
+        <view is="miniprogram_npm/@we-debug/core/component/badge/index">
+          <view class="badge-index--w-badge" style="position: fixed;   right:10px; bottom:20px;">
+            <view class="badge-index--w-badge__subject sk-transparent sk-text-10-0000-612 sk-text">debug</view>
+            <view class="badge-index--w-badge__subject badge-index--w-badge__subject--brightgreen sk-transparent sk-text-10-0000-317 sk-text">调试胶囊</view>
+          </view>
+        </view>
+        <view is="miniprogram_npm/@we-debug/core/component/badge/index">
+          <view class="badge-index--w-badge" style="position: fixed;  top:10px; right:0px; ">
+            <view class="badge-index--w-badge__subject sk-transparent sk-text-10-0000-884 sk-text">error</view>
+            <view class="badge-index--w-badge__subject badge-index--w-badge__subject--red sk-transparent sk-text-10-0000-476 sk-text">0</view>
+          </view>
+        </view>
+        <view is="miniprogram_npm/@we-debug/core/component/badge/index"></view>
       </view>
     </view>
     <view class="sk-loading-spinner">
-      <view class="circular">
-      </view>
+      <view class="circular"></view>
     </view>
   </view>
 </template>

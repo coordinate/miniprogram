@@ -1,8 +1,10 @@
 <!--index.wxml-->
-<import src="/template/loadmore/index" />
 <import src="index.skeleton.wxml" />
 <template is="skeleton" wx-if="{{loading}}" />
-<view class="container">
-  <view wx:for="{{list}}" wx:key="index" class="w-100 p-tb-50 ta-center fs-40" data-skeleton-list>{{item.name}}</view>
+<view hidden="{{loading}}" class="container">
+  <view wx:for="{{list}}" wx:key="index" class="w-100 p-tb-50 ta-center fs-40">{{item.name}}</view>
+  <import src="/template/loadmore/index" />
   <template is="loadmore" data="{{load, more}}" />
 </view>
+<!-- 调试工具 -->
+<we-debug />
