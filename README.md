@@ -1,7 +1,7 @@
 # miniprogram
 
 ## 安装使用
-- 克隆代码运行 `git clone https://gitlab.hello4am.com/yinshi/miniprogram.git --recurse-submodules`
+- 更新git远程子模块运行 `git submodule update --remote`
 - 使用微信开发者工具导入项目，点击调试器下的 mock 选择导入项目根目录的 mock.config.json 文件并启用 mock
 
 ## 目录结构

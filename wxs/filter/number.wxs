@@ -1,0 +1,12 @@
+/**
+ * toFixed 保留小数点后几位
+ * @param {Number} num 目标数字
+ * @param {Number} digits 小数点后数字的个数
+ */
+function toFixed(num, digits = 2) {
+  return num.toFixed(digits)
+}
+
+module.exports = {
+  toFixed: toFixed
+};

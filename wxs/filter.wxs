@@ -1,9 +1,33 @@
-// 获取对象数组下标对应名字
-function getObjectArrayName(objectArray, value) {
-  var index = objectArray.map(function (v) { return v.value }).indexOf(value)
-  return index !== -1 ? objectArray[index].name : ''
+/**
+ * wxs 过滤器
+ * 部分代码来自：https://doc.mini.talelin.com/filter/
+ * 在wxml中使用：<wxs src="../../wxs/filter.wxs" module="filter"/>
+ */
+
+var array = require('./filter/array.wxs');
+var classnames = require('./filter/classnames.wxs');
+var is = require('./filter/is.wxs');
+var number = require('./filter/number.wxs');
+var object = require('./filter/object.wxs');
+var string = require('./filter/string.wxs');
+var zeroPadding = require('./filter/zero-padding.wxs');
+
+/**
+ * 获取对象数组下标对应名字
+ * @param {Array} targetArray 目标数组
+ * @param {String} value 目标值
+ */
+array.getName = function (targetArray, value) {
+  var index = targetArray.map(function (v) { return v.value }).indexOf(value)
+  return index !== -1 ? targetArray[index].name : ''
 }
 
 module.exports = {
-  getObjectArrayName: getObjectArrayName
+  array: array,
+  classnames: classnames,
+  is: is,
+  number: number,
+  object: object,
+  string: string,
+  zeroPadding: zeroPadding
 }

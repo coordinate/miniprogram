@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <import src="/template/loadmore/index" />
-<import src="index.skeleton.wxml"/>
+<import src="index.skeleton.wxml" />
 <template is="skeleton" wx-if="{{loading}}" />
 <view class="container">
   <view wx:for="{{list}}" wx:key="index" class="w-100 p-tb-50 ta-center fs-40" data-skeleton-list>{{item.name}}</view>
