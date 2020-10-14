@@ -89,6 +89,14 @@ const showToast = (title = '系统异常，请稍后再试~', icon = 'none', opt
   })
 }
 
+/**
+ * object 转 query string
+ * @param obj 需要转化的对象
+ */
+const queryStr = (obj = {}) => {
+  return Object.keys(obj).map(v => `${encodeURIComponent(v)}=${encodeURIComponent(obj[v])}`).join('&')
+}
+
 // 防抖函数
 const debounce = (fn, delay = 1000) => {
   let timer = null
@@ -117,6 +125,7 @@ module.exports = {
   openSetting,
   showModal,
   showToast,
+  queryStr,
   debounce,
   throttle
 }
