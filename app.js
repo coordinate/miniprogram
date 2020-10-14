@@ -11,7 +11,11 @@ dayjs.locale('zh-cn')
 
 import weDebug from '@we-debug/core/libs/index'
 import vconsole from '@we-debug/plugin-vconsole'
+import navigate from '@we-debug/plugin-navigate'
 weDebug.use(vconsole)
+weDebug.use(navigate, [
+  { title: 'test页面跳转', desc: '点击右侧按钮前往test页面', url: '/pages/test/test?foo=bar' }
+])
 weDebug.init()
 
 App({
