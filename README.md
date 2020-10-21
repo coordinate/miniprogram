@@ -35,6 +35,8 @@
 - 使用 this.route 来获取当前页面路径，填在分享路径理面
 - constants 用于存放项目特定常量
 - dayjs配置中文只能在app.js里面进行配置
+- 巧妙利用wxs里的array.slice来实现展开折叠评论条数变化
+- 巧妙实现图片缩放top效果，利用父容器添加固定高度且overflow设为hidden，image模式设为widthFix即可
 
 ## 参考文档
 - [使用 Component 构造器构造页面](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/component.html)
