@@ -24,12 +24,12 @@ const navigateBack = (delta = 1) => {
 const openSetting = (scope = 'scope.writePhotosAlbum', withSubscriptions = false) => {
   return new Promise((resolve, reject) => {
     const content = `您拒绝了“${constants.scopeMappings[scope]}”授权\n请点击确定按钮重新打开授权`
-    showModal('提示', content).then(result => {
+    showModal('提示', content).then((result) => {
       // console.log(result)
       wx.openSetting({
         withSubscriptions,
         success: (res) => {
-          console.log('openSetting success', res)
+          // console.log('openSetting success', res)
           if (res.authSetting[scope]) {
             resolve(res)
           } else {
@@ -41,7 +41,7 @@ const openSetting = (scope = 'scope.writePhotosAlbum', withSubscriptions = false
           reject(err)
         }
       })
-    }).catch(error => {
+    }).catch((error) => {
       reject(error)
     })
   })
@@ -56,9 +56,9 @@ const openSetting = (scope = 'scope.writePhotosAlbum', withSubscriptions = false
 const showModal = (title = '', content = '', options = {}) => {
   return new Promise((resolve, reject) => {
     wx.showModal({
-      title,
-      content,
       ...options,
+      content,
+      title,
       success: (res) => {
         // console.log('showModal success', res)
         if (res.confirm) {
@@ -82,11 +82,7 @@ const showModal = (title = '', content = '', options = {}) => {
  * @param options 其它配置选项
  */
 const showToast = (title = '系统异常，请稍后再试~', icon = 'none', options = {}) => {
-  wx.showToast({
-    ...options,
-    title,
-    icon
-  })
+  wx.showToast({ ...options, title, icon })
 }
 
 /**

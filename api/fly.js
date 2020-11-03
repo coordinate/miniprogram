@@ -11,17 +11,24 @@ let unlock = false
 // 登录获取token
 function getToken() {
   return new Promise((resolve, reject) => {
-    wx.login().then((res) => {
-      tokenFly.get('/auth/loginWxApplet', { code: res.code }).then((result) => {
-        if (result.data.code === 200) {
-          const { token } = result.data.data
-          wx.setStorageSync('token', token)
-          ysToken = token
-          resolve(token)
-        } else {
-          reject(result.data)
-        }
-      })
+    wx.login({
+      success: (res) => {
+        // console.log('login success', res)
+        tokenFly.get('/auth/loginWxApplet', { code: res.code }).then((result) => {
+          if (result.data.code === 200) {
+            const { token } = result.data.data
+            wx.setStorageSync('token', token)
+            ysToken = token
+            resolve(token)
+          } else {
+            reject(result.data)
+          }
+        })
+      },
+      fail: (err) => {
+        console.log('login fail', err)
+        reject(err)
+      }
     })
   })
 }
@@ -37,18 +44,21 @@ fly.interceptors.request.use((request) => {
       return request
     }
     wx.setStorageSync('timestamp', +new Date())
-    return wx.checkSession().then(() => {
-      // session_key 未过期，并且在本生命周期一直有效
-      request.headers['Authorization'] = `Bearer ${ysToken}`
-      return request
-    }).catch(() => {
-      // session_key 已经失效，需要重新执行登录流程
-      fly.lock() // 锁定当前实例，后续请求会在拦截器外排队
-      return getToken().then(() => {
+    return wx.checkSession({
+      success: () => { // session_key 未过期，并且在本生命周期一直有效
+        // console.log('checkSession success', res)
         request.headers['Authorization'] = `Bearer ${ysToken}`
-        fly.unlock() // 解锁后，会继续发起请求队列中的任务
         return request
-      })
+      },
+      fail: (err) => { // session_key 已经失效，需要重新执行登录流程
+        console.log('checkSession fail', err)
+        fly.lock() // 锁定当前实例，后续请求会在拦截器外排队
+        return getToken().then(() => {
+          request.headers['Authorization'] = `Bearer ${ysToken}`
+          fly.unlock() // 解锁后，会继续发起请求队列中的任务
+          return request
+        })
+      }
     })
   } else {
     fly.lock() // 锁定当前实例，后续请求会在拦截器外排队
