@@ -2,6 +2,7 @@
   "entryPagePath": "pages/index/index",
   "pages": [
     "pages/index/index",
+    "pages/webview/webview",
     "pages/test/test"
   ],
   "window": {

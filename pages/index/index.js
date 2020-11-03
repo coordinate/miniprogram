@@ -4,6 +4,11 @@ Page({
   data: {
     loading: true
   },
+  toWebview() {
+    wx.navigateTo({
+      url: `/pages/webview/webview?url=${encodeURIComponent('https://baidu.com')}`
+    })
+  },
   getList(page = 1, limit = 10) {
     return new Promise((resolve, reject) => {
       wx.request({
