@@ -35,7 +35,6 @@ function getToken() {
 
 // 请求拦截器
 fly.interceptors.request.use((request) => {
-  request.headers['Content-Type'] = 'application/json;charset=UTF-8'
   if (ysToken) {
     const timestamp = wx.getStorageSync('timestamp')
     if (timestamp && (new Date().getTime() - timestamp < 60 * 1000)) {
