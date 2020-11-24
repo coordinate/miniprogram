@@ -14,18 +14,20 @@ const URL_ADMIN = {
   dev: 'https://dev.hello4am.com',
   prod: 'https://prod.hello4am.com'
 }
+const CDN_ADMIN = {
+  dev: 'https://dev.hello4am.com',
+  prod: 'https://prod.hello4am.com'
+}
 const WSS_ADMIN = {
   dev: 'wss://dev.hello4am.com',
   prod: 'wss://prod.hello4am.com'
 }
-const HOST = 'https://cdn.hello4am.com'
 const config = {
+  URL_PREFIX: `${CDN_ADMIN[env]}/web/`, // 静态资源前缀
   URL_UPLOAD: `${URL_ADMIN[env]}/api`, // 文件上传地址
-  URL_PREFIX: `${HOST}/web/`, // 静态资源前缀
   URL: `${URL_ADMIN[env]}`, // 接口地址
   WSS: `${WSS_ADMIN[env]}`, // socket
   VERSION: envVersion, // 小程序版本
-  HOST
 }
 
 export default config
