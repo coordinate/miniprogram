@@ -1,4 +1,42 @@
 import constants from '../constants/index'
+import download from '../api/download'
+
+// 文件扩展名匹配正则
+const getFileExtendingName = (url) => {
+  const matches = url.match(/\.[^\.]+$/)
+  if (matches) return matches[0]
+  return ''
+}
+
+/**
+ * 二次封装openDocument
+ * @param url 文件下载地址
+ * @param fileName 指定文件名字（包含后缀，若是纯标题则需要解开下面注释）
+ * @param showMenu 是否显示右上角菜单
+ */
+const openDocument = (url, fileName, showMenu = true) => {
+  wx.showLoading({ title: '正在打开' })
+  // 添加后缀 如果fileName不包含后缀则需要解开下面注释
+  // fileName = fileName + getFileExtendingName(url)
+  download.downloadFile(url, fileName).then((filePath) => {
+    wx.openDocument({
+      filePath,
+      showMenu,
+      success: (res) => {
+        console.log('openDocument success', res)
+        wx.hideLoading()
+      },
+      fail: (err) => {
+        console.log('openDocument fail', err)
+        showToast('打开失败')
+        wx.hideLoading()
+      }
+    })
+  }).catch((error) => {
+    showToast('下载失败')
+    wx.hideLoading()
+  })
+}
 
 /**
  * 二次封装navigateBack
@@ -117,6 +155,8 @@ const throttle = (fn, delay = 5000) => {
 }
 
 module.exports = {
+  getFileExtendingName,
+  openDocument,
   navigateBack,
   openSetting,
   showModal,

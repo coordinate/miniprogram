@@ -23,7 +23,7 @@ export default {
         }
       }
       if (fileName) { // 指定文件下载后存储的路径 (本地路径)
-        options.filePath = `${wx.env.USER_DATA_PATH}/${fileName}${getFileExtendingName(url)}`
+        options.filePath = `${wx.env.USER_DATA_PATH}/${fileName}`
         // 删除其他已打开文件，来释放缓存（目前本地文件缓存空间提升至200M）
         // const fs = wx.getFileSystemManager()
         // const res = fs.readdirSync(wx.env.USER_DATA_PATH)
@@ -35,11 +35,4 @@ export default {
       wx.downloadFile(options)
     })
   }
-}
-
-// 文件扩展名匹配正则
-const getFileExtendingName = (filename) => {
-  const matches = filename.match(/\.[^\.]+$/)
-  if (matches) return matches[0]
-  return ''
 }
