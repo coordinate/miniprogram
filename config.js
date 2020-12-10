@@ -12,14 +12,17 @@ if (envVersion === 'develop') { // develop 开发版
 }
 const URL_ADMIN = {
   dev: 'https://dev.hello4am.com',
+  test: 'https://test.hello4am.com',
   prod: 'https://prod.hello4am.com'
 }
 const CDN_ADMIN = {
   dev: 'https://dev.hello4am.com',
+  test: 'https://test.hello4am.com',
   prod: 'https://prod.hello4am.com'
 }
 const WSS_ADMIN = {
   dev: 'wss://dev.hello4am.com',
+  test: 'wss://test.hello4am.com',
   prod: 'wss://prod.hello4am.com'
 }
 const config = {
