@@ -28,10 +28,9 @@ Page({
     })
   },
   async onLoad(options) {
-    const list = await this.getList()
+    this.initData()
     this.setData({
-      loading: false,
-      list
+      loading: false
     })
   }
 })
