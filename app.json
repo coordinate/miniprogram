@@ -14,8 +14,7 @@
   "usingComponents": {
     "parser": "parser-wx",
     "painter":"/components/painter/painter",
-    "mp-loading": "weui-miniprogram/loading/loading",
-    "we-debug": "@we-debug/core/component/index/index"
+    "mp-loading": "weui-miniprogram/loading/loading"
   },
   "lazyCodeLoading": "requiredComponents",
   "useExtendedLib": {

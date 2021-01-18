@@ -1,5 +1,5 @@
 /*
-此文件为开发者工具生成，生成时间: 2020/10/13 下午9:51:29 
+此文件为开发者工具生成，生成时间: 2021/1/18 下午4:03:13 
 
 在 D:\library\miniprogram\pages\index\index.wxss 中引入样式
 ```
@@ -11,7 +11,7 @@
 .sk-transparent {
     color: transparent !important;
   }
-.sk-text-18-7500-341 {
+.sk-text-18-7500-726 {
     background-image: linear-gradient(transparent 18.7500%, #EEEEEE 0%, #EEEEEE 81.2500%, transparent 0%) !important;
     background-size: 100% 64.0000rpx;
     position: relative !important;
@@ -23,44 +23,24 @@
     color: transparent !important;
     background-repeat: repeat-y !important;
   }
-.sk-text-18-7500-213 {
+.sk-text-18-7500-990 {
     background-image: linear-gradient(transparent 18.7500%, #EEEEEE 0%, #EEEEEE 81.2500%, transparent 0%) !important;
     background-size: 100% 64.0000rpx;
     position: relative !important;
   }
-.sk-text-18-7500-644 {
+.sk-text-18-7500-912 {
     background-image: linear-gradient(transparent 18.7500%, #EEEEEE 0%, #EEEEEE 81.2500%, transparent 0%) !important;
     background-size: 100% 64.0000rpx;
     position: relative !important;
   }
-.sk-text-18-7500-897 {
+.sk-text-18-7500-417 {
     background-image: linear-gradient(transparent 18.7500%, #EEEEEE 0%, #EEEEEE 81.2500%, transparent 0%) !important;
     background-size: 100% 64.0000rpx;
     position: relative !important;
   }
-.sk-text-18-7500-734 {
+.sk-text-18-7500-770 {
     background-image: linear-gradient(transparent 18.7500%, #EEEEEE 0%, #EEEEEE 81.2500%, transparent 0%) !important;
     background-size: 100% 64.0000rpx;
-    position: relative !important;
-  }
-.sk-text-10-0000-612 {
-    background-image: linear-gradient(transparent 10.0000%, #EEEEEE 0%, #EEEEEE 90.0000%, transparent 0%) !important;
-    background-size: 100% 30.0000rpx;
-    position: relative !important;
-  }
-.sk-text-10-0000-317 {
-    background-image: linear-gradient(transparent 10.0000%, #EEEEEE 0%, #EEEEEE 90.0000%, transparent 0%) !important;
-    background-size: 100% 30.0000rpx;
-    position: relative !important;
-  }
-.sk-text-10-0000-884 {
-    background-image: linear-gradient(transparent 10.0000%, #EEEEEE 0%, #EEEEEE 90.0000%, transparent 0%) !important;
-    background-size: 100% 30.0000rpx;
-    position: relative !important;
-  }
-.sk-text-10-0000-476 {
-    background-image: linear-gradient(transparent 10.0000%, #EEEEEE 0%, #EEEEEE 90.0000%, transparent 0%) !important;
-    background-size: 100% 30.0000rpx;
     position: relative !important;
   }
 .sk-container {

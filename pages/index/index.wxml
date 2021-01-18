@@ -10,5 +10,3 @@
   <import src="/template/loadmore/index" />
   <template is="loadmore" data="{{load, more}}" />
 </view>
-<!-- 调试工具 -->
-<we-debug />

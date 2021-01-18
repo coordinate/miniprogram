@@ -1,5 +1,5 @@
 <!--
-此文件为开发者工具生成，生成时间: 2020/10/13 下午9:51:29 
+此文件为开发者工具生成，生成时间: 2021/1/18 下午4:03:13 
 使用方法：
 在 D:\library\miniprogram\pages\index\index.wxml 引入模板
 
@@ -18,29 +18,20 @@
 <template name="skeleton">
   <view class="sk-container">
     <view class="container">
-      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-18-7500-341 sk-text" style="background-position-x: 50%;">Sharon</view>
-      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-18-7500-213 sk-text" style="background-position-x: 50%;">Sarah</view>
-      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-18-7500-644 sk-text" style="background-position-x: 50%;">Amy</view>
-      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-18-7500-897 sk-text" style="background-position-x: 50%;">Margaret</view>
-      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-18-7500-734 sk-text" style="background-position-x: 50%;">Thomas</view>
-    </view>
-    <view is="miniprogram_npm/@we-debug/core/component/index/index">
-      <view is="miniprogram_npm/@we-debug/core/component/ui-check/index"></view>
-      <view is="miniprogram_npm/@we-debug/core/component/mask/index"></view>
-      <view class="component-index-index--w-badges-group">
-        <view is="miniprogram_npm/@we-debug/core/component/badge/index">
-          <view class="badge-index--w-badge" style="position: fixed;   right:10px; bottom:20px;">
-            <view class="badge-index--w-badge__subject sk-transparent sk-text-10-0000-612 sk-text">debug</view>
-            <view class="badge-index--w-badge__subject badge-index--w-badge__subject--brightgreen sk-transparent sk-text-10-0000-317 sk-text">调试胶囊</view>
-          </view>
-        </view>
-        <view is="miniprogram_npm/@we-debug/core/component/badge/index">
-          <view class="badge-index--w-badge" style="position: fixed;  top:10px; right:0px; ">
-            <view class="badge-index--w-badge__subject sk-transparent sk-text-10-0000-884 sk-text">error</view>
-            <view class="badge-index--w-badge__subject badge-index--w-badge__subject--red sk-transparent sk-text-10-0000-476 sk-text">0</view>
-          </view>
-        </view>
-        <view is="miniprogram_npm/@we-debug/core/component/badge/index"></view>
+      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-18-7500-726 sk-text" style="background-position-x: 50%;">
+        Joseph
+      </view>
+      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-18-7500-990 sk-text" style="background-position-x: 50%;">
+        David
+      </view>
+      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-18-7500-912 sk-text" style="background-position-x: 50%;">
+        Timothy
+      </view>
+      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-18-7500-417 sk-text" style="background-position-x: 50%;">
+        Brenda
+      </view>
+      <view class="w-100 p-tb-50 ta-center fs-40 sk-transparent sk-text-18-7500-770 sk-text" style="background-position-x: 50%;">
+        Dorothy
       </view>
     </view>
     <view class="sk-loading-spinner">
