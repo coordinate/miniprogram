@@ -14,7 +14,7 @@ function getToken() {
     wx.login({
       success: (res) => {
         // console.log('login success', res)
-        tokenFly.get('/auth/loginWxApplet', { code: res.code }).then((result) => {
+        tokenFly.get(`/auth/${config.APPID}/ma/${res.code}`).then((result) => {
           if (result.data.code === 200) {
             const { token } = result.data.data
             wx.setStorageSync('token', token)

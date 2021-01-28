@@ -1,4 +1,5 @@
 import config from '../config'
+import { ysToken } from './fly'
 export default {
   /**
    * 上传单张图片
@@ -10,13 +11,14 @@ export default {
       wx.uploadFile({
         url: config.URL_UPLOAD,
         filePath,
+        header: { 'Authorization': `Bearer ${ysToken}` },
         name: 'file', // 根据后端接口而定
         formData: {}, // 根据后端接口而定
         success: (res) => {
           console.log('uploadFile success===>', res.data)
           const data = JSON.parse(res.data)
-          if (data.code === 0) {
-            resolve(data.data)
+          if (data.code === 200) {
+            resolve(data.data.url)
           } else {
             reject(data)
           }

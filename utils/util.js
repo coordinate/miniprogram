@@ -1,11 +1,25 @@
 import constants from '../constants/index'
 import download from '../api/download'
+import config from '../config'
 
 // 文件扩展名匹配正则
 const getFileExtendingName = (url) => {
   const matches = url.match(/\.[^\.]+$/)
   if (matches) return matches[0]
   return ''
+}
+
+// 加载自定义字体
+const loadFontFace = (fonts = []) => {
+  fonts.forEach(v => {
+    wx.loadFontFace({
+      global: true,
+      family: v.family,
+      source: `url('${config.URL_FONT}/${v.file}')`,
+      // success: console.log,
+      fail: console.log
+    })
+  })
 }
 
 /**
@@ -156,6 +170,7 @@ const throttle = (fn, delay = 5000) => {
 
 module.exports = {
   getFileExtendingName,
+  loadFontFace,
   openDocument,
   navigateBack,
   openSetting,

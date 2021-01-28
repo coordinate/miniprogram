@@ -16,7 +16,14 @@ export default {
           data: params,
           fail: reject
         })
-        wx.onSocketMessage(resolve)
+        const intervalId = setInterval(() => {
+          wx.sendSocketMessage({
+            data: params,
+            fail: reject
+          })
+        }, 20 * 1000)
+        wx.onSocketMessage(console.log)
+        resolve(intervalId)
       })
     })
   }
