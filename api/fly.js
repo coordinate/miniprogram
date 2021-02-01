@@ -33,6 +33,28 @@ function getToken() {
   })
 }
 
+// 检查登录态
+function checkSession(request) {
+  return new Promise((resolve, reject) => {
+    wx.checkSession({
+      success: (res) => { // session_key 未过期，并且在本生命周期一直有效
+        console.log('checkSession success', res)
+        request.headers['Authorization'] = `Bearer ${ysToken}`
+        resolve(request)
+      },
+      fail: (err) => { // session_key 已经失效，需要重新执行登录流程
+        console.log('checkSession fail', err)
+        fly.lock() // 锁定当前实例，后续请求会在拦截器外排队
+        getToken().then(() => {
+          request.headers['Authorization'] = `Bearer ${ysToken}`
+          fly.unlock() // 解锁后，会继续发起请求队列中的任务
+          resolve(request)
+        })
+      }
+    })
+  })
+}
+
 // 请求拦截器
 fly.interceptors.request.use((request) => {
   if (ysToken) {
@@ -41,24 +63,10 @@ fly.interceptors.request.use((request) => {
       // 一分钟内无需重复调用 wx.checkSession
       request.headers['Authorization'] = `Bearer ${ysToken}`
       return request
+    } else {
+      wx.setStorageSync('timestamp', +new Date())
+      return checkSession(request)
     }
-    wx.setStorageSync('timestamp', +new Date())
-    return wx.checkSession({
-      success: () => { // session_key 未过期，并且在本生命周期一直有效
-        // console.log('checkSession success', res)
-        request.headers['Authorization'] = `Bearer ${ysToken}`
-        return request
-      },
-      fail: (err) => { // session_key 已经失效，需要重新执行登录流程
-        console.log('checkSession fail', err)
-        fly.lock() // 锁定当前实例，后续请求会在拦截器外排队
-        return getToken().then(() => {
-          request.headers['Authorization'] = `Bearer ${ysToken}`
-          fly.unlock() // 解锁后，会继续发起请求队列中的任务
-          return request
-        })
-      }
-    })
   } else {
     fly.lock() // 锁定当前实例，后续请求会在拦截器外排队
     return getToken().then(() => {
