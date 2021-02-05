@@ -26,5 +26,21 @@ export default {
         resolve(intervalId)
       })
     })
+  },
+
+  /**
+   * 关闭 WebSocket 连接
+   * @param intervalId 定时器ID
+   */
+  closeSocket(intervalId) {
+    clearInterval(intervalId)
+    wx.closeSocket({
+      success: (res) => {
+        console.log('closeSocket success', res)
+      },
+      fail: (err) => {
+        console.log('closeSocket fail', err)
+      }
+    })
   }
 }

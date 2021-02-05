@@ -7,6 +7,15 @@ function toFixed(num, digits = 2) {
   return num.toFixed(digits)
 }
 
+/**
+ * 获取随机数字
+ * @param {Number} max 最大值
+ */
+function random(max) {
+  return Math.round(Math.random() * max)
+}
+
 module.exports = {
-  toFixed: toFixed
+  toFixed: toFixed,
+  random: random
 };

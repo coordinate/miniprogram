@@ -9,6 +9,12 @@ const getFileExtendingName = (url) => {
   return ''
 }
 
+// 格式化数字
+const formatNumber = n => {
+  n = n.toString()
+  return n[1] ? n : '0' + n
+}
+
 // 加载自定义字体
 const loadFontFace = (fonts = []) => {
   fonts.forEach(v => {
@@ -170,6 +176,7 @@ const throttle = (fn, delay = 5000) => {
 
 module.exports = {
   getFileExtendingName,
+  formatNumber,
   loadFontFace,
   openDocument,
   navigateBack,
