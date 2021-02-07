@@ -21,7 +21,7 @@ const loadFontFace = (fonts = []) => {
     wx.loadFontFace({
       global: true,
       family: v.family,
-      source: `url('${config.URL_FONT}/${v.file}')`,
+      source: `url('${config.URL_PREFIX}/fonts/${v.file}')`,
       // success: console.log,
       fail: console.log
     })
