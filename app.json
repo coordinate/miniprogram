@@ -11,7 +11,7 @@
     "navigationBarTextStyle": "black"
   },
   "usingComponents": {
-    "parser": "parser-wx",
+    "mp-html": "mp-html",
     "painter":"/components/painter/painter",
     "mp-loading": "weui-miniprogram/loading/loading"
   },

@@ -25,7 +25,7 @@
 - [小程序扩展组件库](https://developers.weixin.qq.com/miniprogram/dev/extended/component-plus/)
 - [WeUI组件库](https://developers.weixin.qq.com/miniprogram/dev/extended/weui/)
 - [分享图插件 Painter](https://github.com/Kujiale-Mobile/Painter)
-- [富文本插件 Parser](https://github.com/jin-yufeng/Parser)
+- [富文本插件 mp-html](https://github.com/jin-yufeng/mp-html)
 - [图表插件 echarts](https://github.com/ecomfe/echarts-for-weixin)
 - [Fly.js](https://github.com/wendux/fly)
 - [Day.js](https://day.js.org/zh-CN/)

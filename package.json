@@ -15,6 +15,6 @@
   "license": "ISC",
   "dependencies": {
     "dayjs": "latest",
-    "parser-wx": "latest"
+    "mp-html": "latest"
   }
 }
