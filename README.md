@@ -3,8 +3,6 @@
 ## 安装使用
 - 使用微信开发者工具导入项目，点击调试器下的 mock 选择导入项目根目录的 mock.config.json 文件并启用 mock
 - 执行 `npm i` 安装模块 然后点击工具构建npm完成构建
-- 拉取远程子模块运行 `git submodule update --init --recursive`
-- 更新远程子模块运行 `git submodule update --remote`
 
 ## [目录结构](./FolderExplorer.txt)
 
