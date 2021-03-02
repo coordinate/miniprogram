@@ -1,7 +1,8 @@
 module.exports = Behavior({
   data: {
-    load: false,
-    more: true,
+    ready: false, // 是否初次加载
+    load: false, // 是否正在加载
+    more: true, // 是否加载全部
     list: [],
     page: 1
   },
@@ -12,6 +13,7 @@ module.exports = Behavior({
     async initData() {
       const list = await this.getList()
       this.setData({
+        ready: true,
         more: true,
         page: 1,
         list
@@ -26,18 +28,14 @@ module.exports = Behavior({
       if (load || !more) return
       this.setData({ load: true })
       const data = await this.getList(page + 1)
-      this.setData({
-        load: false
-      })
+      this.setData({ load: false })
       if (data.length) {
         this.setData({
           list: list.concat(data),
           page: page + 1
         })
       } else {
-        this.setData({
-          more: false
-        })
+        this.setData({ more: false })
       }
     }
   }

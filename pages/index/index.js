@@ -9,15 +9,12 @@ Page({
       url: `/pages/webview/webview?url=${encodeURIComponent('https://baidu.com')}`
     })
   },
-  getList(page = 1, limit = 10) {
+  getList(pageNum = 1, pageSize = 10) {
     return new Promise((resolve, reject) => {
       wx.request({
         url: 'https://brain.lololun.top/getList',
+        data: { pageNum, pageSize },
         dataType: 'json',
-        data: {
-          page,
-          limit
-        },
         success: (res) => {
           resolve(res.data)
         },
@@ -29,8 +26,6 @@ Page({
   },
   async onLoad(options) {
     this.initData()
-    this.setData({
-      loading: false
-    })
+    this.setData({ loading: false })
   }
 })

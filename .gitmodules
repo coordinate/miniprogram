@@ -1,6 +1,0 @@
-[submodule "style"]
-	path = style
-	url = https://gitlab.hello4am.com/yinshi/style.git
-[submodule "components/painter"]
-	path = components/painter
-	url = https://github.com/Kujiale-Mobile/PainterCore.git
