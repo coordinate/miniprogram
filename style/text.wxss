@@ -1,0 +1,163 @@
+/* 文本样式 */
+/* fs,fw,lh,ta,wb,ell */
+
+/* 基本组合 */
+
+.fs-16 {
+  font-size: 16rpx;
+}
+
+.fs-18 {
+  font-size: 18rpx;
+}
+
+.fs-20 {
+  font-size: 20rpx;
+}
+
+.fs-22 {
+  font-size: 22rpx;
+}
+
+.fs-24 {
+  font-size: 24rpx;
+}
+
+.fs-26 {
+  font-size: 26rpx;
+}
+
+.fs-28 {
+  font-size: 28rpx;
+}
+
+.fs-30 {
+  font-size: 30rpx;
+}
+
+.fs-32 {
+  font-size: 32rpx;
+}
+
+.fs-34 {
+  font-size: 34rpx;
+}
+
+.fs-36 {
+  font-size: 36rpx;
+}
+
+.fs-38 {
+  font-size: 38rpx;
+}
+
+.fs-40 {
+  font-size: 40rpx;
+}
+
+.fs-42 {
+  font-size: 42rpx;
+}
+
+.fs-44 {
+  font-size: 44rpx;
+}
+
+.fs-46 {
+  font-size: 46rpx;
+}
+
+.fs-48 {
+  font-size: 48rpx;
+}
+
+.fs-50 {
+  font-size: 50rpx;
+}
+
+.c-333 {
+  color: #333;
+}
+
+.c-666 {
+  color: #666;
+}
+
+.c-999 {
+  color: #999;
+}
+
+.c-ccc {
+  color: #ccc;
+}
+
+.c-fff {
+  color: #fff;
+}
+
+.fw-b {
+  font-weight: bold;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fw-800 {
+  font-weight: 800;
+}
+
+.lh {
+  line-height: 1.4rem;
+}
+
+.ta-c {
+  text-align: center;
+}
+
+.ta-r {
+  text-align: right;
+}
+
+.ta-j {
+  /* 文本两端对齐，最后一行无效 */
+  text-align: justify;
+}
+
+.wb-a {
+  word-break: break-all;
+}
+
+/* 常用组合 */
+
+.ell {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ell-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.ell-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}

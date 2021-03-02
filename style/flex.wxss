@@ -1,0 +1,192 @@
+/* flex弹性布局 */
+/* f,if,fd,jc,ai,ac,fg,fs,fa,as */
+
+/* 基本组合 */
+
+.f {
+  display: flex;
+}
+
+.if {
+  display: inline-flex;
+}
+
+.fd-rr {
+  flex-direction: row-reverse;
+}
+
+.fd-c {
+  flex-direction: column;
+}
+
+.fd-cr {
+  flex-direction: column-reverse;
+}
+
+.fw-w {
+  flex-wrap: wrap;
+}
+
+.fw-wr {
+  flex-wrap: wrap-reverse;
+}
+
+.jc-e {
+  justify-content: flex-end;
+}
+
+.jc-c {
+  justify-content: center;
+}
+
+.jc-b {
+  justify-content: space-between;
+}
+
+.jc-a {
+  justify-content: space-around;
+}
+
+.ai-s {
+  align-items: flex-start;
+}
+
+.ai-e {
+  align-items: flex-end;
+}
+
+.ai-c {
+  align-items: center;
+}
+
+.ai-b {
+  align-items: baseline;
+}
+
+.ac-s {
+  align-content: flex-start;
+}
+
+.ac-e {
+  align-content: flex-end;
+}
+
+.ac-c {
+  align-content: center;
+}
+
+.ac-b {
+  align-content: space-between;
+}
+
+.ac-a {
+  align-content: space-around;
+}
+
+.fg-1 {
+  flex-grow: 1;
+}
+
+.fg-2 {
+  flex-grow: 2;
+}
+
+.fg-3 {
+  flex-grow: 3;
+}
+
+.fg-4 {
+  flex-grow: 4;
+}
+
+.fg-5 {
+  flex-grow: 5;
+}
+
+.fs-0 {
+  flex-shrink: 0;
+}
+
+.f-a {
+  /* 1 1 auto */
+  flex: auto;
+}
+
+.f-n {
+  /* 0 0 auto */
+  flex: none;
+}
+
+.as-s {
+  align-self: flex-start;
+}
+
+.as-e {
+  align-self: flex-end;
+}
+
+.as-c {
+  align-self: center;
+}
+
+.as-b {
+  align-self: baseline;
+}
+
+/* 常用组合 */
+
+.f-fw {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.f-ac {
+  display: flex;
+  align-items: center;
+}
+
+.f-jc {
+  display: flex;
+  justify-content: center;
+}
+
+.f-jb {
+  display: flex;
+  justify-content: space-between;
+}
+
+.f-cc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.f-cb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.f-y {
+  display: flex;
+  flex-direction: column;
+}
+
+.f-y-ac {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.f-y-cc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.f-y-jb {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
