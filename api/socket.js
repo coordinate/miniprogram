@@ -21,7 +21,7 @@ export default {
             data: params,
             fail: reject
           })
-        }, 20 * 1000)
+        }, 30 * 1000)
         wx.onSocketMessage(console.log)
         resolve(intervalId)
       })
