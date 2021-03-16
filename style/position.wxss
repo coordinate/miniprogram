@@ -47,12 +47,20 @@
   top: 50%;
 }
 
+.top-100 {
+  top: 100%;
+}
+
 .left {
   left: 0;
 }
 
 .left-50 {
   left: 50%;
+}
+
+.left-100 {
+  left: 100%;
 }
 
 .bottom {
@@ -81,11 +89,35 @@
 
 /* 常用组合 */
 
+.abs-x {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.abs-y {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .abs-cc {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.fix-x {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.fix-y {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .fix-cc {

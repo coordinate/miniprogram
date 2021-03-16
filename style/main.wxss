@@ -11,6 +11,8 @@
 @import "./text.wxss";
 @import "./position.wxss";
 
+/* 重置样式 */
+
 view,
 scroll-view,
 swiper,
@@ -19,6 +21,10 @@ input,
 textarea,
 label,
 navigator,
+cover-view,
+cover-image,
+page-container,
+share-element,
 image {
   box-sizing: border-box;
 }

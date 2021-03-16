@@ -75,6 +75,30 @@
   font-size: 50rpx;
 }
 
+.fs-60 {
+  font-size: 60rpx;
+}
+
+.fs-66 {
+  font-size: 66rpx;
+}
+
+.fs-80 {
+  font-size: 80rpx;
+}
+
+.fs-88 {
+  font-size: 88rpx;
+}
+
+.fs-100 {
+  font-size: 100rpx;
+}
+
+.c-000 {
+  color: #000;
+}
+
 .c-333 {
   color: #333;
 }
@@ -120,7 +144,7 @@
 }
 
 .lh {
-  line-height: 1.4rem;
+  line-height: 1.4;
 }
 
 .ta-c {
