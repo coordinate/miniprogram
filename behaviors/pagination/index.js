@@ -12,12 +12,8 @@ module.exports = Behavior({
      */
     async initData() {
       const list = await this.getList()
-      this.setData({
-        ready: true,
-        more: true,
-        page: 1,
-        list
-      })
+      this.setData({ ready: true, more: true, list })
+      this.data.page = 1
     },
 
     /**
@@ -30,10 +26,8 @@ module.exports = Behavior({
       const data = await this.getList(page + 1)
       this.setData({ load: false })
       if (data.length) {
-        this.setData({
-          list: list.concat(data),
-          page: page + 1
-        })
+        this.setData({ list: list.concat(data) })
+        this.data.page++
       } else {
         this.setData({ more: false })
       }
