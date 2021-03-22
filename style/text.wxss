@@ -144,7 +144,7 @@
 }
 
 .lh {
-  line-height: 1.4;
+  line-height: 1.4rem;
 }
 
 .ta-c {
@@ -160,11 +160,12 @@
   text-align: justify;
 }
 
-.wb-a {
+/* 常用组合 */
+
+.bw {
+  word-wrap: break-word;
   word-break: break-all;
 }
-
-/* 常用组合 */
 
 .ell {
   overflow: hidden;
