@@ -27,7 +27,5 @@ Page({
   async onLoad(options) {
     this.initData()
     this.setData({ loading: false })
-    console.log(wx.$util.funEncodeHTML('<span>by ThinkerZhang</span>'))
-    console.log(wx.$util.funDecodeHTML('&lt;span&gt;by ThinkerZhang&lt;/span&gt;'))
   }
 })
