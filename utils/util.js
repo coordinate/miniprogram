@@ -58,6 +58,7 @@ const loadFontFace = (fonts = []) => {
       global: true,
       family: v.family,
       source: `url('${config.URL_PREFIX}/fonts/${v.file}')`,
+      scopes: ['webview', 'native'],
       // success: console.log,
       fail: console.log
     })
